@@ -364,6 +364,195 @@
      EXPERIENCE
   ========================= */
 
+   .projects {
+      /* margin-top: 65px; */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      position: relative;
+
+      overflow: hidden;
+
+      border: 1px solid rgb(50, 49, 49);
+      border-radius: 11px;
+
+      background: var(--surface);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+    }
+
+    .project-image {
+      height: 270px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 30% 30%,
+          rgba(109,140,255,0.18),
+          transparent 40%
+        ),
+        #11141a;
+    }
+
+    .project-image::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          transparent 50%,
+          rgba(13, 40, 241, 0.4)
+        );
+    }
+
+    .mockup {
+      width: 72%;
+      height: 72%;
+
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+
+      background: #0a0c10;
+
+      box-shadow:
+        0 25px 60px rgba(0,0,0,0.5);
+
+      transform: rotate(-3deg);
+
+      transition: transform 0.4s ease;
+    }
+
+    .project:hover .mockup {
+      transform: rotate(0deg) scale(1.03);
+    }
+
+    .mockup-top {
+      height: 25px;
+
+      border-bottom: 1px solid var(--border);
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 9px;
+      gap: 4px;
+    }
+
+    .mockup-dot {
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+      background: #414650;
+    }
+
+    .mockup-body {
+      padding: 17px;
+    }
+
+    .mockup-line {
+      height: 7px;
+
+      border-radius: 3px;
+
+      background: #252a34;
+
+      margin-bottom: 9px;
+    }
+
+    .mockup-line.short {
+      width: 45%;
+    }
+
+    .mockup-line.medium {
+      width: 68%;
+    }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+
+      margin-top: 20px;
+    }
+
+    .mockup-card {
+      height: 65px;
+
+      border-radius: 4px;
+
+      background: #181c24;
+      border: 1px solid #222733;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-number {
+      color: var(--accent);
+
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .project h3 {
+      margin-top: 8px;
+
+      font-size: 23px;
+      letter-spacing: -0.03em;
+    }
+
+    .project p {
+      margin-top: 10px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .project-bottom {
+      margin-top: 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .project-link {
+      color: var(--text);
+
+      font-size: 12px;
+      font-weight: 600;
+
+      transition: color 0.2s ease;
+    }
+
+    .project-link:hover {
+      color: var(--accent);
+    }
+
   .experience-list{
     border-top:1px solid var(--line);
   }
@@ -1008,361 +1197,540 @@
 
   <div class="proj-list">
 
-
-    <!-- SHOPPY -->
-
-    <div class="proj">
-
-      <div class="num mono">
-        01
-      </div>
-
-      <div>
-
-        <h3>
-          Shoppy
-        </h3>
-
-        <p>
-          Responsive e-commerce app with product browsing, category
-          filtering, search, sorting, a shopping cart, and a wishlist,
-          built with reusable React components.
-        </p>
-
-        <div class="stack">
-
-          <span class="tag">React</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">API</span>
-
-        </div>
-
-      </div>
-
-      <div class="proj-links">
-
-        <a
-          href="https://superlative-taiyaki-18919a.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
-
-      </div>
-
-    </div>
+    <div class="projects">
 
 
-    <!-- DILMUN -->
+      <!-- SHOPPY -->
 
-    <div class="proj">
+      <article class="project">
 
-      <div class="num mono">
-        02
-      </div>
+        <div class="project-image">
 
-      <div>
+          <div class="mockup">
 
-        <h3>
-          Dilmun
-        </h3>
+            <div class="mockup-top">
 
-        <p>
-          Multilingual marketplace web app built as a Re:Coded capstone
-          project, letting users buy, sell, and donate products.
-          Supports three languages and login via Email, Google, or Facebook.
-        </p>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
 
-        <div class="stack">
+            </div>
 
-          <span class="tag">React</span>
-          <span class="tag">Redux Toolkit</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">i18n</span>
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
 
-      <div class="proj-links">
+        <div class="project-content">
 
-        <a
-          href="https://capstone-dilmun.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
+          <div class="project-number">
+            01 / E-COMMERCE
+          </div>
 
-        <a
-          href="https://github.com/ReCoded-Org/capstone-IQLBPS-Dilmun"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub ↗
-        </a>
+          <h3>
+            Shoppy
+          </h3>
 
-      </div>
-
-    </div>
+          <p>
+            A React-based e-commerce experience with product browsing,
+            filtering, sorting, favorites, cart functionality,
+            authentication, and responsive interfaces.
+          </p>
 
 
-    <!-- MOVIES -->
+          <div class="tags">
 
-    <div class="proj">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">API</span>
 
-      <div class="num mono">
-        03
-      </div>
+          </div>
 
-      <div>
 
-        <h3>
-          Movies
-        </h3>
+          <div class="project-bottom">
 
-        <p>
-          OOP-based movie browser that pulls live data from the TMDB API —
-          browse by genre, view ratings and cast, watch trailers, and get
-          related recommendations.
-        </p>
+            <a
+              href="https://superlative-taiyaki-18919a.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              Live website ↗
+            </a>
 
-        <div class="stack">
-
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript (OOP)</span>
-          <span class="tag">Bootstrap</span>
-          <span class="tag">TMDB API</span>
+          </div>
 
         </div>
 
-      </div>
-
-      <div class="proj-links">
-
-        <a
-          href="https://movies-websit.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
-
-        <a
-          href="https://github.com/viyan-najmaldin/oop-movie"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub ↗
-        </a>
-
-      </div>
-
-    </div>
+      </article>
 
 
-    <!-- DATA VISUALIZATION -->
+      <!-- DILMUN -->
 
-    <div class="proj">
+      <article class="project">
 
-      <div class="num mono">
-        04
-      </div>
+        <div class="project-image">
 
-      <div>
+          <div class="mockup">
 
-        <h3>
-          Data Visualization
-        </h3>
+            <div class="mockup-top">
 
-        <p>
-          Dashboard that turns raw data into interactive charts, built
-          to make trends and patterns easier to read and present to
-          different audiences.
-        </p>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
 
-        <div class="stack">
+            </div>
 
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Chart.js</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Typed.js</span>
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
 
-      <div class="proj-links">
+        <div class="project-content">
 
-        <a
-          href="https://vidata-visualization.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
+          <div class="project-number">
+            02 / MARKETPLACE
+          </div>
 
-        <a
-          href="https://github.com/viyan-najmaldin/Data-Visualization-"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub ↗
-        </a>
+          <h3>
+            Dilmun
+          </h3>
 
-      </div>
-
-    </div>
+          <p>
+            A multilingual marketplace built as a Re:Coded capstone
+            project for buying, selling, and donating products with
+            authentication and responsive interfaces.
+          </p>
 
 
-    <!-- ATTENDANCE -->
+          <div class="tags">
 
-    <div class="proj">
+            <span class="tag">React</span>
+            <span class="tag">Redux Toolkit</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">i18n</span>
 
-      <div class="num mono">
-        05
-      </div>
+          </div>
 
-      <div>
 
-        <h3>
-          Category-Based Attendance System
-        </h3>
+          <div class="project-bottom">
 
-        <p>
-          Attendance management system built for the College of Engineering
-          at Salahaddin University, tracking attendance by card number and
-          auto-calculating attendance percentages.
-        </p>
+            <a
+              href="https://capstone-dilmun.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              Live website ↗
+            </a>
 
-        <div class="stack">
+            <a
+              href="https://github.com/ReCoded-Org/capstone-IQLBPS-Dilmun"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
 
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">PHP</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Bootstrap</span>
+          </div>
 
         </div>
 
-      </div>
-
-      <div class="proj-links">
-
-        <a
-          href="https://github.com/viyan-najmaldin/Category-Based-Attendance-System"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub ↗
-        </a>
-
-      </div>
-
-    </div>
+      </article>
 
 
-    <!-- 2048 -->
+      <!-- MOVIES -->
 
-    <div class="proj">
+      <article class="project">
 
-      <div class="num mono">
-        06
-      </div>
+        <div class="project-image">
 
-      <div>
+          <div class="mockup">
 
-        <h3>
-          2048 Game
-        </h3>
+            <div class="mockup-top">
 
-        <p>
-          A 4x4 puzzle game built to practice JavaScript game logic
-          and DOM manipulation, with keyboard and button controls and
-          win/game-over detection.
-        </p>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
 
-        <div class="stack">
+            </div>
 
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">CSS</span>
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
 
-      <div class="proj-links">
+        <div class="project-content">
 
-        <a
-          href="https://2048-game-viyan.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
+          <div class="project-number">
+            03 / MOVIE PLATFORM
+          </div>
 
-        <a
-          href="https://github.com/viyan-najmaldin/2048-Game"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub ↗
-        </a>
+          <h3>
+            Movies
+          </h3>
 
-      </div>
-
-    </div>
+          <p>
+            An OOP-based movie browser using the TMDB API with movie
+            discovery, genres, ratings, cast information, trailers,
+            and related recommendations.
+          </p>
 
 
-    <!-- MY NOTES -->
+          <div class="tags">
 
-    <div class="proj">
+            <span class="tag">HTML</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">TMDB API</span>
 
-      <div class="num mono">
-        07
-      </div>
+          </div>
 
-      <div>
 
-        <h3>
-          My Notes
-        </h3>
+          <div class="project-bottom">
 
-        <p>
-          A simple notes app for quickly writing down and organizing
-          short notes in the browser.
-        </p>
+            <a
+              href="https://movies-websit.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              Live website ↗
+            </a>
 
-        <div class="stack">
+            <a
+              href="https://github.com/viyan-najmaldin/oop-movie"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
 
-          <span class="tag">React.js</span>
-          <span class="tag">LocalStorage</span>
-          <span class="tag">Tailwind CSS</span>
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
-      <div class="proj-links">
 
-        <a
-          href="https://resonant-queijadas-72a200.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Live site ↗
-        </a>
+      <!-- DATA VISUALIZATION -->
 
-      </div>
+      <article class="project">
+
+        <div class="project-image">
+
+          <div class="mockup">
+
+            <div class="mockup-top">
+
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+
+            </div>
+
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <div class="project-number">
+            04 / DATA
+          </div>
+
+          <h3>
+            Data Visualization
+          </h3>
+
+          <p>
+            An interactive dashboard designed to turn data into
+            readable visualizations and make trends and patterns
+            easier to understand.
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Tailwind</span> 
+            <span class="tag">Typed.js</span>
+
+          </div>
+
+
+          <div class="project-bottom">
+
+            <a
+              href="https://vidata-visualization.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              Live website ↗
+            </a>
+
+            <a
+              href="https://github.com/viyan-najmaldin/Data-Visualization-"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ATTENDANCE -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <div class="mockup">
+
+            <div class="mockup-top">
+
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+
+            </div>
+
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <div class="project-number">
+            05 / MANAGEMENT SYSTEM
+          </div>
+
+          <h3>
+            Category-Based Attendance System
+          </h3>
+
+          <p>
+            An attendance management system built with PHP and MySQL
+            for tracking attendance and calculating attendance
+            percentages.
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Bootstrap</span>
+
+          </div>
+
+
+          <div class="project-bottom">
+
+            <a
+              href="https://github.com/viyan-najmaldin/Category-Based-Attendance-System"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 2048 -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <div class="mockup">
+
+            <div class="mockup-top">
+
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+
+            </div>
+
+            <div class="mockup-body">
+
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+
+              <div class="mockup-grid">
+
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <div class="project-number">
+            06 / GAME
+          </div>
+
+          <h3>
+            2048 Game
+          </h3>
+
+          <p>
+            A browser-based puzzle game built to practice JavaScript
+            game logic, DOM manipulation, keyboard controls,
+            and game-state handling.
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+
+          </div>
+
+
+          <div class="project-bottom">
+
+            <a
+              href="https://2048-game-viyan.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              Live website ↗
+            </a>
+
+            <a
+              href="https://github.com/viyan-najmaldin/2048-Game"
+              target="_blank"
+              rel="noopener"
+              class="project-link"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
 
     </div>
+
 
   </div>
 
